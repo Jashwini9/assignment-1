@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible"content="IE-edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title> Demonstrating armstrong numbers</title>
+    </head>
+    <body>
+        <script>
+            var n=prompt("enter the value");
+            var temp;
+            n=parseInt(n);
+            var armstrongno=0;
+            temp=n;
+            var totatDigits=n.length;
+            console.log("totalDigits");
+            while(n>0){
+                var rem=n%10;
+                armstrongno=armstrongno+(rem*totatDigits);
+                n=n/10;
+                n=parseInt(n);
+            }
+            if(temp==armstrongno){
+                console.log("its a armstrongno");
+            }else{
+                console.log("not a armstrongno");
+            }
+            console.log("armstrongno");
+            </script>
+    </body>
+</html>
