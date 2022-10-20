@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatible"content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title> json objects</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                studentname:<span id="sName">...</span>
+            </li>
+            <li>
+                age:<span id="sAge">...</span>
+            </li>
+            <li>
+                gender:<span id="sGender">...</span>
+            </li>
+            <li>
+                marks:<span id="sMarks">...</span>
+            </li>
+        </ul>
+        <script>
+            var sDetails={
+                Name:'jashwini',
+                Age:21,
+                Gender:'female',
+                Marks:[44,55,78,85],
+                readStudentData(){
+
+                },
+                getTotalAndAvg:function(){
+                for(var i=0;i<sDetails.marks.length;i++){
+                    sDetails.total+=sDetails.marks[i];
+                }
+                sDetails.avg=sDetails.total/sDetails.marks.length;
+                sDetails.getGrade();
+                },
+                getGrade:function(){
+                if(sDetails>=40){
+                    sDetails.grade="you got passed";
+                }else{
+                    sDetails.grade="next time";
+                }
+            },
+              displayStudentDetails:function(){
+                sDetails.getTotalAndAvg();
+                document.getElementById("sName").innerHTML=sDetails.Name;
+                document.getElementById("sAge").innerHTML=sDetails.Age;
+                document.getElementById("sGender").innerHTML=sDetails.Gender;
+                document.getElementById("sMarks").innerHTML=sDetails.Marks;
+
+                //console.log("student details"+sDetails);
+               // console.log("student name is"+sDetails.name);//
+               // console.log("student age is"+sDetails.age);
+               // console.log("student gender is"+sDetails.gender);//
+            }
+        };
+            sDetails.displayStudentDetails();
+    
+        </script>
+    </body>
+</html>

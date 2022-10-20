@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="UTF-8-compatible"content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title> Dhtml/creating elements through javascript</title>
+    </head>
+    <body>
+        <div> Dhtml concepts</div>
+        <div id="container">
+
+        </div>
+        <script>
+            var spanElements=document.createElement("span");
+            spanElements.innerHTML="hey how are you";
+            spanElements.style.backgroundColor="red";
+            document.querySelector("#container").append(spanElements);
+            console.log(spanElements);
+
+
+
+        </script>
+    </body>
+</html>

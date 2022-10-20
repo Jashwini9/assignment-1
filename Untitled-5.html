@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="UTF-comatible"content="IE=edge">
+        <meta name="X-UA"content="width=device-width,initial-scale=1.0">
+        <title> DHTML using Student Details </title>
+    </head>
+    <body>
+        <div> DHTML using Student Details </div>
+        <script>
+            var sDetails={
+                name:"jashwini",
+                age:20,
+                gender:"female",
+                marks:['50','80','73','85','94'],  
+            var getTotalAndAvg:function(){
+            for(var i=0;i=sDetails.marks.length;i++){
+                sDetails.total=sDetails.marks.length;
+            }
+            sDetails.avg=sDetails.total/sDetails.marks.length;
+            },sDetails.grade();
+            var getGrade:function(){
+                if(sDetails.total>=40){
+                    sDetails.grade="you got passed";
+                }else{
+                    sDetails.grade="better luck next time";
+                }
+            },
+            var displayStudentDetails:function(){
+                sDetails.getTotalAndAvg();
+                console.log("student Details");
+                console.log("student name is"+sDetails.name);
+                console.log("student age is"+sDetails.age);
+                console.log("student gender is"+sDetails.gender);
+                console.log("student marks is"+sDetails.marks);
+
+            }
+        };
+            displayStudentDetails();
+        </script>
+
+    </body>
+</html>

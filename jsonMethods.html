@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="UTF-8-compatible"content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title> Demonstrating Json objects with methods</title>
+    </head>
+    <body>
+        <ul>
+            <li>
+                student name:<span id="name">...</span>
+            </li>
+            <li>
+                age:<span id="age">...</span>
+            </li>
+            <li>
+                gender:<span id="gender">...</span>
+            </li>
+            <li>
+                marks:<span id="marks">...</span>
+            </li>
+            <li>
+                total:<span id="total">...</span>
+            </li>
+            <li>
+                avg:<span id="avg">...</span>
+            </li>
+        </ul>
+        <script>
+            var sDetails={
+                name:'tumsi',
+                age:21,
+                gender:'female',
+                marks:[55,84,65,73,95],
+                getTotalAndAvg: function(){
+                sDetails.total=0;
+                for(var i=0;i<sDetails.marks.length;i++){
+                sDetails.total+=sDetails.marks[i];
+            }
+                sDetails.avg=sDetails.total/sDetails.marks.length;
+                sDetails.getGrade();
+            },
+                getGrade: function(){
+                if(sDetails.total>=40){
+                    sDetails.grade="passed";
+                }else{
+                    sDetails.grade="better luck next time";
+                }
+             },
+                displayStudentDetails: function(){
+                sDetails.getTotalAndAvg();
+                document.querySelector("name").innerHTML=sDetails.name;
+                document.querySelector("age").innerHTML=sDetails.age;
+                document.querySelector("gender").innerHTML=sDetails.gender;
+                document.querySelector("marks").innerHTML=sDetails.marks;
+                document.querySelector("total").innerHTML=sDetails.total;
+                document.querySelector("avg").innerHTML=sDetails.avg;
+
+                //console.log("student name is"+sDetails.name);
+                //console.log("student age is"+sDetails.age);
+                //console.log("student gender is"+sDetails.gender);
+                //console.log("student marks is"+sDetails.marks);
+                //console.log("student total is"+sDetails.total);
+               // console.log("student avg is"+sDetails.avg);//*
+             }
+            };
+             sDetails.displayStudentDetails();
+    
+             </script>
+    </body>
+</html>

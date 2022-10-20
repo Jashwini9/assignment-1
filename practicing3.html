@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-compatile"content="IE=edge">
+        <meta name="viewport"content="width=device-width,initial-scale=1.0">
+        <title>date objects</title>
+    </head>
+    <body>
+        <script>
+            //1.Aug-15th-2022
+             var myCurrentDate=new Date("August 15 2022"); 
+
+             var monthList=['jan','feb','mar','apr','may','june','july','August','sept','oct'];
+
+             var dateFormat1=monthList[myCurrentDate.getMonth()]+','+myCurrentDate.getDate()+'th '+myCurrentDate.getFullYear()
+
+             console.log(""+dateFormat1);
+             // 3. August, 30th 2022
+
+            var monthList = ['January' , 'February' , 'March' , 'April' , 'May' , 'june' , 'July' , 'August' , 'September' , 'October' , 'November' , 'December'];
+
+            var myCurrentDate = new Date("Aug 30 2022");
+
+            var dateFormat2 = monthList[myCurrentDate.getMonth()] + ', ' + myCurrentDate.getDate() + 'th ' + myCurrentDate.getFullYear();
+
+            console.log("dateFormat2:- " + dateFormat2);
+
+            //3.Tue,Aug 30th 2022
+        
+             var dayList=['monday','Tue','wed','thur','friday','sat'];
+
+             var monthList=['jan','feb','mar','apr','may','june','july','August','sept','oct'];
+
+             var myCurrentDate=new Date("Tue Aug 30th 2022");
+
+             var dateFormat3=dayList[myCurrentDate.getDay()]+','+monthList[myCurrentDate.getMonth()]+','+myCurrentDate.getDate()+'th'+myCurrentDate.getFullYear()
+
+             console.log("dateformat3 is"+dateFormat3);
+             </script>
+    </body>
+</html>
